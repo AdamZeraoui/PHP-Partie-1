@@ -8,6 +8,6 @@ Ecrire un algorithme permettant de compter le nombre de cacartères contenus dan
 <?php
 
 $phrase = "Notre formation DL commence aujourd'hui";
-$longueur = strlen($phrase);
+$longueur = strlen($phrase); //compte les caractères et les espaces//
 echo "La phrase « $phrase » contient $longueur caractères<br>";
-echo "La phrase « $phrase » contient ". strlen($phrase). " carcatères<br>";
+echo "La phrase « $phrase » contient ". strlen($phrase). " carcatères<br>"; //version en une ligne//
