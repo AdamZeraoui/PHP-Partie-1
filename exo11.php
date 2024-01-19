@@ -6,3 +6,4 @@
 <h2>Résultat</h2>
 
 <?php
+$Marque = array(1=> 'Peugot', 'Renault','BMW','Mercedes');
