@@ -7,9 +7,8 @@ Attention, la valeur générée devra être arrondie à 2 décimales.<br></p>
 
 <?php
 
-$francs = 100;
-$taux= 15.24;
-$euroEnFrancs = $francs / $taux;
-echo "Montant en francs : $francs <br>
-$francs francs = $taux €<br>";
-echo "1 Euro = ". round($euroEnFrancs,2) . " Francs"; 
+$taux = 15.24/100;
+$Vfranc = 1;
+$resultaF = $Vfranc * $taux;
+
+echo "Montant en francs : $Vfranc<br> $Vfranc francs = $resultaF €";
