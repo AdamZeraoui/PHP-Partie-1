@@ -9,7 +9,7 @@
 $prixUnit = 9.99;
 $Quantité = 5;
 $TVA = 0.2;
-$prixHT = bcmul($prixUnit,$Quantité,2);
+$prixHT = bcmul($prixUnit,$Quantité,2); //bcmul permet de faire des multiplication. Le ,2 permet de l'imiter à 2 chiffres après la virgule.//
 $prixTVA = bcmul($prixHT,$TVA,2);
 $PrixTTC = bcadd($prixHT,$prixTVA,2);
 

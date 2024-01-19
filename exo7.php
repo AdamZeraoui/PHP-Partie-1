@@ -12,14 +12,14 @@ Si la catégorie n'est pas gérée, merci de préciser.
 <?php
 
 $age = 10;
-if(gettype($age) == "double" || gettype($age) == "integer") {
+if(gettype($age) == "double" || gettype($age) == "integer") { //double = décimal ; integer = entier. Pour vérifier si $age est bien un nombre entier ou décimal.//
     if($age>= 12) {
         $Categ = "Cadet";
-    }elseif(10<=$age or $age>=11){
+    }elseif(10<=$age || $age>=11){
         $Categ = "Minime";
-    }elseif(8<=$age or $age>=9) { 
+    }elseif(8<=$age || $age>=9) { 
         $Categ = "Pupille";
-    }elseif(6<=$age or $age>=7){
+    }elseif(6<=$age || $age>=7){
         $Categ = "Poussin";
     }elseif($age<=5){
         $Categ = "qui n'est pas gérée.";

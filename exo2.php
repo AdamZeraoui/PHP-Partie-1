@@ -8,6 +8,6 @@
 <?php
 
 $phrase = "Notre formation DL commence aujourd'hui";
-$nbMots = str_word_count($phrase);
+$nbMots = str_word_count($phrase); //compte les mots//
 echo "La phrase « $phrase » contient $nbMots mots<br>";
-echo "La phrase « $phrase » contient ".str_word_count($phrase)." mots<br>";
+echo "La phrase « $phrase » contient ".str_word_count($phrase)." mots<br>"; //version en une ligne//

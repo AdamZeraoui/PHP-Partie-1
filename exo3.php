@@ -8,5 +8,5 @@
 
 $phrase = "Notre formation DL commence aujourd'hui";
 echo "Ancienne phrase : « $phrase » <br>";
-$phrase = str_replace("aujourd'hui", "demain", $phrase);
+$phrase = str_replace("aujourd'hui", "demain", $phrase); //permet de remplacer "Aujourdhui" par "Demain" au sein de "$phrase"//
 echo "Nouvelle phrase : « $phrase » <br>";

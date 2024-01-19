@@ -9,8 +9,8 @@ Si la personne est une femme dont l'âge est compris entre 18 et 35 ans ou si c'
 
 $age = 32;
 $sexe = "F";
-
-if($sexe == 'F') {
+// && = and ; || = ou //
+if($sexe == 'F') {//methode de comparaison et de réponse au cas par cas. Trop long//
     if($age>=18 && $age<=35) {
         $Imp = "La personne est imposable.";
 
@@ -26,10 +26,10 @@ echo "Âge : $age<br>Sexe : $sexe <br> $Imp";
 //Solution plus simple
 echo "<i><h3>Solution plus simple</h3></i>";
 
-$condition1 = $sexe == "F" && $age >= 18 && $age <= 35;
+$condition1 = $sexe == "F" && $age >= 18 && $age <= 35; //regrouper toute les condition en une variable econosime beaucoup de place//
 $condition2 = $sexe == "M" && $age >= 20;
 echo "Âge : $age<br> Sexe : $sexe<br>";
-if($condition1 || $condition2){
+if($condition1 || $condition2){ //permet de vérifier si les condition sont vrais ou fausse//
     echo "La personne est impossable";
 } else {
     echo "La personne n'est pas imposable";
