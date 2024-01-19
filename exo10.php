@@ -61,7 +61,7 @@ $rp=$rp%2;
 $m1=intdiv($rp,1);
 $rp=$rp%1;
 
-if($m10>1){ //ajout de pluriel pour le mon "billet" et "pièce"//
+if($m10>1){
     $S10="s";
 }else $S10="";
 if($m2>1){
