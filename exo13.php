@@ -13,7 +13,8 @@ function cM(array $tableau) : float {
     $moy = round($sonote / $nbnote,2);
     return $moy;
 }
-echo "les note obtenue par l'élève sont :";foreach($notes as $note){
+echo "les note obtenue par l'élève sont :";
+foreach($notes as $note){
     echo "$note ";
 }
 echo "<br>Sa moyenne générale est donc de : ".cM($notes);

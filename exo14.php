@@ -5,6 +5,9 @@
 <h2> Résultat </h2>
 
 <?php
+$day = new DateTime();
+$naiss= new DateTime ("1985-01-17");
+$diff= $day->diff($naiss);
 
-$jour=date_time_set();
-echo $jour;
+echo "Age de la personne :";
+echo $diff->format('%y ans %m mois %d jours');
