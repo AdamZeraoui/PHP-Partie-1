@@ -15,6 +15,6 @@ if($NbMar > 1){
 else $s ="";
 echo "Il y a $NbMar marque$s de voitures dans le tableau :<br><br>";
 while($n <= $NbMar){
-    echo "$Marque[$n] <br>"; // permet d'afficher chaque élément du tableau
+    echo "<li>$Marque[$n]</li> <br>"; // permet d'afficher chaque élément du tableau
     $n++;
 }
