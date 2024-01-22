@@ -6,15 +6,24 @@
 <h2>Résultat</h2>
 
 <?php
-$Marque = array(1=> 'Peugot', 'Renault','BMW','Mercedes');
-$NbMar = count($Marque);
-$n = 1;
-if($NbMar > 1){
+$Marques = ['Peugot', 'Renault','BMW','Mercedes'];
+$NbMar = count($Marques);
+$n = 0;
+if($NbMar > 0){
     $s="s";
 }
 else $s ="";
 echo "Il y a $NbMar marque$s de voitures dans le tableau :<br><br>";
+echo "<ul>";
 while($n <= $NbMar){
-    echo "<li>$Marque[$n]</li> <br>"; // permet d'afficher chaque élément du tableau
+    echo "<li>$Marques[$n]</li> <br>"; // permet d'afficher chaque élément du tableau
     $n++;
 }
+echo "</ul>";
+
+
+echo "<ul>";
+foreach ($Marques as $marque) {
+    echo "<li>$marque</li>";
+}
+echo "</ul>";

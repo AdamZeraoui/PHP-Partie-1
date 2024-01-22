@@ -13,15 +13,15 @@ Si la catégorie n'est pas gérée, merci de préciser.
 
 $age = 10;
 if(gettype($age) == "double" || gettype($age) == "integer") { //double = décimal ; integer = entier. Pour vérifier si $age est bien un nombre entier ou décimal.//
-    if($age>= 12) {
+    if($age >= 12) {
         $Categ = "Cadet";
-    }elseif(10<=$age || $age>=11){
+    }elseif($age >= 10){
         $Categ = "Minime";
-    }elseif(8<=$age || $age>=9) { 
+    }elseif($age>=8) { 
         $Categ = "Pupille";
-    }elseif(6<=$age || $age>=7){
+    }elseif($age >= 6){
         $Categ = "Poussin";
-    }elseif($age<=5){
+    }else {
         $Categ = "qui n'est pas gérée.";
     }
     echo "L'enfant qui a $age ans est dans la catégorie « $Categ »<br>";
