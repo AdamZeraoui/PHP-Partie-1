@@ -7,7 +7,6 @@
 <?php
 $day = new DateTime();
 $naiss= new DateTime ("1985-01-17");
-$diff= $day->diff($naiss);
+$age= $naiss->diff($day);
 
-echo "Age de la personne :";
-echo $diff->format('%y ans %m mois %d jours');
+echo "Age de la personne :".$age->format('%y ans %m mois %d jours');
