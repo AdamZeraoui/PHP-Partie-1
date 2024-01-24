@@ -9,44 +9,52 @@ $p2 = new Personne("DUCHEMIN","Alice","1985-01-17");</p>
 <h2>Résultat</h2>
 
 
-
 <?php
-
+//poo
 class Personne {
     private $nom;
     private $prenom;
-    private $dateNaissance;
+    private $naiss;
 
-    public function __construct($nom, $prenom, $dateNaissance) {
+    public function __construct($nom, $prenom, $naiss) {
         $this->nom = $nom;
         $this->prenom = $prenom;
-        $this->dateNaissance = $dateNaissance;
+        $this->naiss = $naiss;
     }
 
     public function getNom() {
         return $this->nom;
+    } 
+    public function setNom($nom){
+        $this->nom = $nom;
     }
-
     public function getPrenom() {
         return $this->prenom;
     }
-
-    public function getDateNaissance() {
-        return $this->dateNaissance;
+    public function setPrenom($prenom){
+        $this->prenom = $prenom;
     }
 
-    public function getAge() {
-        $dateNaissance = new DateTime($this->dateNaissance);
+    public function getNaiss() {
+        return $this->naiss;
+    }
+    public function setNaiss($naiss){
+        $this->naiss=$naiss;
+    }
+
+    public function calcAge() {
+        $naiss = new DateTime($this->naiss);
         $aujourdHui = new DateTime();
-        $difference = $dateNaissance->diff($aujourdHui);
+        $difference = $naiss->diff($aujourdHui);
         return $difference->y;
     }
-}
+    public function __toString(){
+        return $this->getPrenom() . ' ' . $this->getNom() . ' a ' .$this->calcAge() . ' ans' . "<br>";
+    }
+} 
 
 $p1 = new Personne("DUPONT", "Michel", "1980-02-19");
-$p2 = new Personne("DUCHEMIN", "Alice", "1994-01-25");
+$p2 = new Personne("DUCHEMIN", "Alice", "1985-01-17");
 
-echo $p1->getPrenom() . ' ' . $p1->getNom() . ' a ' . $p1->getAge() . ' ans' . "<br>";
-echo $p2->getPrenom() . ' ' . $p2->getNom() . ' a ' . $p2->getAge() . ' ans' . "<br>";
-
-?>
+echo $p1;
+echo $p2;
