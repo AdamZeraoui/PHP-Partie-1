@@ -10,17 +10,27 @@ $p2 = new Personne("DUCHEMIN","Alice","1985-01-17");</p>
 
 
 <?php
-//poo
-class Personne {
-    private $nom;
-    private $prenom;
-    private $naiss;
 
-    public function __construct($nom, $prenom, $naiss) {
+// POO
+
+// classe : un modèle, moule, template (c'est "un concept abstrait" jusqu'au moment où on reçoit une instance (grâce à "new"))
+// objet : instance de classe (c'est du concret)
+
+class Personne {
+
+    // attributs (ce qui compose la classe, ce qui la définit, son état (state))
+    private string $nom;
+    private string $prenom;
+    private DateTime $dateNaiss;
+
+    // constructeur (initialise les attributs, est appelé par "new" et renvoie une instance de cette classe)
+    public function __construct($nom, $prenom, string $dateNaissString) {
         $this->nom = $nom;
         $this->prenom = $prenom;
-        $this->naiss = $naiss;
+        $this->dateNaiss = new DateTime($dateNaissString);
     }
+
+    // getters/setters
 
     public function getNom() {
         return $this->nom;
@@ -35,26 +45,35 @@ class Personne {
         $this->prenom = $prenom;
     }
 
-    public function getNaiss() {
-        return $this->naiss;
+    public function getDateNaiss() {
+        return $this->dateNaiss;
     }
-    public function setNaiss($naiss){
-        $this->naiss=$naiss;
+    public function setDateNaiss(string $dateNaissString){
+        $this->dateNaiss = new DateTime($dateNaissString);
     }
 
+    // méthodes (comportements, actions possibles sur un objet de cette classe)
+
     public function calcAge() {
-        $naiss = new DateTime($this->naiss);
         $aujourdHui = new DateTime();
-        $difference = $naiss->diff($aujourdHui);
+        $difference = $this->dateNaiss->diff($aujourdHui);
         return $difference->y;
     }
+
+    public function getInfos() {
+        return $this . ' a ' .$this->calcAge() . ' ans' . "<br>";
+    }
+
+    // méthode magique, doit retourner un string, donne la représentation de l'objet sous forme de string
     public function __toString(){
-        return $this->getPrenom() . ' ' . $this->getNom() . ' a ' .$this->calcAge() . ' ans' . "<br>";
+        return $this->getPrenom() . ' ' . $this->getNom();
     }
 } 
 
 $p1 = new Personne("DUPONT", "Michel", "1980-02-19");
 $p2 = new Personne("DUCHEMIN", "Alice", "1985-01-17");
 
-echo $p1;
-echo $p2;
+echo $p1->getInfos();
+echo $p2->getInfos();
+
+// echo new Personne("NOM", "Prénom", "1901-01-01");
