@@ -24,7 +24,7 @@ class Personne {
     private DateTime $dateNaiss;
 
     // constructeur (initialise les attributs, est appelé par "new" et renvoie une instance de cette classe)
-    public function __construct($nom, $prenom, string $dateNaissString) {
+    public function __construct(string $nom,string $prenom, string $dateNaissString) {
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->dateNaiss = new DateTime($dateNaissString);
